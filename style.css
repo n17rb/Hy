@@ -1,0 +1,94 @@
+/* إعدادات المتجر الأساسي (كودك الأصلي) */
+body {
+    background-color: #272727;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    overflow-x: hidden;
+    direction: rtl;
+    transition: background-color 0.5s ease;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1020px;
+}
+
+.header-box {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 1020 / 914; 
+}
+
+.img-box-1 { width: 100%; position: relative; z-index: 5; aspect-ratio: 1020 / 690; }
+.img-box-2 {
+    width: 100%; position: absolute; bottom: 0; z-index: 1; aspect-ratio: 1020 / 224;
+    animation: slideInFromTop 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes slideInFromTop {
+    0% { transform: translateY(-80%); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.img-box-3 { width: 60%; max-width: 518px; margin-top: 20px; aspect-ratio: 518 / 224; }
+.img-box-4 { width: 50%; max-width: 365px; margin-top: 40px; margin-bottom: 20px; aspect-ratio: 365 / 57; }
+
+.services-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px; 
+    width: 90%;
+    max-width: 760px;
+    margin-bottom: 60px;
+}
+
+.img-box-grid { width: 100%; aspect-ratio: 365 / 380; cursor: pointer; }
+.active-link:hover { transform: scale(1.05); transition: 0.3s; }
+
+/* إعدادات واجهة الخدمات الجديدة (Instagram) */
+.wrapper-services {
+    display: none; /* مخفية في البداية */
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 1020px;
+    padding: 20px 0;
+}
+
+.header-insta { width: 100%; max-width: 924px; aspect-ratio: 924 / 471; }
+.title-insta { width: 100%; max-width: 407px; aspect-ratio: 407 / 98; margin: 30px 0; }
+
+.grid-insta {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    width: 90%;
+    max-width: 830px;
+}
+
+.item-insta { width: 100%; aspect-ratio: 407 / 404; }
+
+.back-btn {
+    align-self: flex-start;
+    margin: 10px;
+    padding: 10px 20px;
+    background: #e1306c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* تنسيق عام للصور */
+img { width: 100%; height: 100%; object-fit: contain; display: block; }
+
+@media (max-width: 480px) {
+    .services-container, .grid-insta { gap: 10px; }
+    .img-box-3, .img-box-4 { width: 80%; }
+}
