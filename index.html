@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>متجر رانسي الشامل</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="wrapper" id="main-store">
+        <div class="header-box">
+            <div class="img-box-1">
+                <img src="Img1.PNG" alt="صورة 1">
+            </div>
+            <div class="img-box-2">
+                <img src="Img2.PNG" alt="صورة 2">
+            </div>
+        </div>
+
+        <div class="img-box-3">
+            <img src="Img3.PNG" alt="صورة 3">
+        </div>
+
+        <div class="img-box-4">
+            <img src="Img4.PNG" alt="صورة 4">
+        </div>
+
+        <div class="services-container">
+            <div class="img-box-grid active-link" onclick="openInstagramServices()">
+                <img src="Img6.PNG" alt="خدمات إنستقرام">
+            </div>
+            <div class="img-box-grid"><img src="Img5.PNG" alt="صورة 5"></div>
+            <div class="img-box-grid"><img src="Img8.PNG" alt="صورة 8"></div>
+            <div class="img-box-grid"><img src="Img7.PNG" alt="صورة 7"></div>
+        </div>
+    </div>
+
+    <div class="wrapper-services" id="instagram-services">
+        <button class="back-btn" onclick="backToMain()">العودة للمتجر الرئيسي</button>
+
+        <div class="header-insta">
+            <img src="imgg1.PNG" alt="هيدر إنستقرام">
+        </div>
+
+        <div class="title-insta">
+            <img src="imgg2.PNG" alt="اختر الخدمة">
+        </div>
+
+        <div class="grid-insta">
+            <div class="item-insta"><img src="imgg3.PNG"></div>
+            <div class="item-insta"><img src="imgg4.PNG"></div>
+            <div class="item-insta"><img src="imgg5.PNG"></div>
+            <div class="item-insta"><img src="imgg6.PNG"></div>
+            <div class="item-insta"><img src="imgg7.PNG"></div>
+            <div class="item-insta"><img src="imgg8.PNG"></div>
+            <div class="item-insta full-width"><img src="imgg9.PNG"></div>
+        </div>
+    </div>
+
+    <script>
+        function openInstagramServices() {
+            document.getElementById('main-store').style.display = 'none';
+            document.getElementById('instagram-services').style.display = 'flex';
+            document.body.style.backgroundColor = "#ffffff"; // تغيير الخلفية للأبيض عند فتح الخدمات
+            window.scrollTo(0, 0);
+        }
+
+        function backToMain() {
+            document.getElementById('main-store').style.display = 'flex';
+            document.getElementById('instagram-services').style.display = 'none';
+            document.body.style.backgroundColor = "#272727"; // إعادة الخلفية للون المتجر
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
